@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct compare
+{
+char name[10];
+char lname[20];
+int age;
+};
+int main()
+{ int diff;
+struct compare Person1,Person2;
+printf("Enter Person1 name ");
+scanf("%s",&Person1.name);
+printf("Enter Person1 lname ");
+scanf("%s",&Person1.lname);
+printf("Enter Persons1 age ");
+scanf("%d",&Person1.age);
+printf("Enter Person2 name ");
+scanf("%s",&Person2.name);
+printf("Enter Person2 lname ");
+scanf("%s",&Person2.lname);
+printf("Enter Person2 age ");
+scanf("%d",&Person2.age);
+if (Person1.age > Person2.age){
+diff=Person1.age-Person2.age;
+printf( "%s%s is older than %s by %d years", Person1.name,Person1.lname,Person2.name,diff);
+}
+if (Person2.age > Person1.age){
+diff=Person2.age-Person1.age;
+printf( "%s%s is older than %s by %d years", Person2.name,Person2.lname, Person1.name,diff);
+}
+return 0;
+}
